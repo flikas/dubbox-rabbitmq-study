@@ -2,6 +2,7 @@ package hello;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -15,22 +16,23 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 
-	final static String queueName = "spring-boot";
+	final static String queueName = "rpc_queue";
 
 	@Bean
 	Queue queue() {
 		return new Queue(queueName, false);
 	}
 
-	@Bean
-	TopicExchange exchange() {
-		return new TopicExchange("spring-boot-exchange");
-	}
-
-	@Bean
-	Binding binding(Queue queue, TopicExchange exchange) {
-		return BindingBuilder.bind(queue).to(exchange).with(queueName);
-	}
+//	@Bean
+//	DirectExchange exchange() {
+//		return new DirectExchange("amq.direct");
+////		return new TopicExchange("amq.direct");
+//	}
+//
+//	@Bean
+//	Binding binding(Queue queue, TopicExchange exchange) {
+//		return BindingBuilder.bind(queue).to(exchange).with(queueName);
+//	}
 	
 	@Bean
 	ConnectionFactory connectionFactory(){
@@ -57,6 +59,7 @@ public class Application {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
+		System.out.println("Receving...");
 		SpringApplication.run(Application.class, args);
 	}
 

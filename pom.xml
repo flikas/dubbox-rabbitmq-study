@@ -10,10 +10,17 @@
   <modules>
   	
   	<module>java-server-esb-sif</module>
+  	<module>java-client-esb-sif</module>
   </modules>
   <parent>
   	<artifactId>spring-boot-starter-parent</artifactId>
   	<groupId>org.springframework.boot</groupId>
   	<version>1.5.7.RELEASE</version>
   </parent>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-amqp</artifactId>
+  	</dependency>
+  </dependencies>
 </project>
