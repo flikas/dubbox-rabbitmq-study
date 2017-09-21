@@ -8,7 +8,8 @@
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>
   <modules>
-  	<module>jsrv</module>
+  	
+  	<module>java-server-esb-sif</module>
   </modules>
   <parent>
   	<artifactId>spring-boot-starter-parent</artifactId>
