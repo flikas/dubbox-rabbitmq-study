@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbox-rabbitmq-study.iml" filepath="$PROJECT_DIR$/dubbox-rabbitmq-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-client-esb-sif/java-client-esb-sif.iml" filepath="$PROJECT_DIR$/java-client-esb-sif/java-client-esb-sif.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-server-esb-sif/java-server-esb-sif.iml" filepath="$PROJECT_DIR$/java-server-esb-sif/java-server-esb-sif.iml" />
+    </modules>
+  </component>
+</project>
